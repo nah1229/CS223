@@ -49,12 +49,23 @@
             this.objname = new System.Windows.Forms.ErrorProvider(this.components);
             this.inv = new System.Windows.Forms.ErrorProvider(this.components);
             this.cnt = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chk_isavailable = new System.Windows.Forms.CheckBox();
+            this.chk_list = new System.Windows.Forms.CheckedListBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.labelusr = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceerror)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.displaytable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnt)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -201,9 +212,9 @@
             // displaytable
             // 
             this.displaytable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.displaytable.Location = new System.Drawing.Point(32, 301);
+            this.displaytable.Location = new System.Drawing.Point(12, 301);
             this.displaytable.Name = "displaytable";
-            this.displaytable.Size = new System.Drawing.Size(575, 150);
+            this.displaytable.Size = new System.Drawing.Size(776, 150);
             this.displaytable.TabIndex = 15;
             // 
             // objname
@@ -218,12 +229,132 @@
             // 
             this.cnt.ContainerControl = this;
             // 
+            // chk_isavailable
+            // 
+            this.chk_isavailable.AutoSize = true;
+            this.chk_isavailable.Location = new System.Drawing.Point(497, 177);
+            this.chk_isavailable.Name = "chk_isavailable";
+            this.chk_isavailable.Size = new System.Drawing.Size(80, 17);
+            this.chk_isavailable.TabIndex = 16;
+            this.chk_isavailable.Text = "Is Available";
+            this.chk_isavailable.UseVisualStyleBackColor = true;
+            this.chk_isavailable.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // chk_list
+            // 
+            this.chk_list.FormattingEnabled = true;
+            this.chk_list.Items.AddRange(new object[] {
+            "isplaying",
+            "isworking",
+            "isregular"});
+            this.chk_list.Location = new System.Drawing.Point(653, 177);
+            this.chk_list.Name = "chk_list";
+            this.chk_list.Size = new System.Drawing.Size(120, 94);
+            this.chk_list.TabIndex = 17;
+            this.chk_list.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(434, 214);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(56, 17);
+            this.radioButton1.TabIndex = 18;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Simple";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(434, 237);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(63, 17);
+            this.radioButton3.TabIndex = 20;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Variable";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(431, 197);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Product Style";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton4);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(521, 197);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(114, 76);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Payment";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(6, 40);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(57, 17);
+            this.radioButton4.TabIndex = 23;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Paypal";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(80, 17);
+            this.radioButton2.TabIndex = 23;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "On Delivery";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // labelusr
+            // 
+            this.labelusr.AutoSize = true;
+            this.labelusr.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.labelusr.Location = new System.Drawing.Point(687, 9);
+            this.labelusr.Name = "labelusr";
+            this.labelusr.Size = new System.Drawing.Size(64, 25);
+            this.labelusr.TabIndex = 23;
+            this.labelusr.Text = "label1";
+            this.labelusr.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(581, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Loged in username:";
+            this.label8.Click += new System.EventHandler(this.label8_Click_1);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(770, 439);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelusr);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.chk_list);
+            this.Controls.Add(this.chk_isavailable);
             this.Controls.Add(this.displaytable);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.price);
@@ -239,6 +370,7 @@
             this.Controls.Add(this.add);
             this.Controls.Add(this.number);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.15F);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.name)).EndInit();
@@ -247,6 +379,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.objname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnt)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +408,15 @@
         private System.Windows.Forms.ErrorProvider objname;
         private System.Windows.Forms.ErrorProvider inv;
         private System.Windows.Forms.ErrorProvider cnt;
+        private System.Windows.Forms.CheckBox chk_isavailable;
+        private System.Windows.Forms.CheckedListBox chk_list;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label labelusr;
+        private System.Windows.Forms.Label label8;
     }
 }

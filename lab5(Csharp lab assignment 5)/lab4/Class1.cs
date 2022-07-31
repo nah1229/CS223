@@ -15,7 +15,9 @@ namespace lab4
         public string objectname { get; set;}
         public string count { get; set;}
         public string price { get; set;}
-
+        public bool isavailable { get; set;}
+        public string productstyle { get; set;}
+        public string paymentstyle { get; set;}
         public void save()
         {
             product.Add(this);

@@ -13,9 +13,10 @@ namespace lab4
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(string user)
         {
             InitializeComponent();
+            labelusr.Text = user;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,6 +76,25 @@ namespace lab4
 
             if ( !string.IsNullOrEmpty(number.Text) &&  !string.IsNullOrEmpty(count.Text) && !string.IsNullOrEmpty(inventory.Text) && result == true)
             {
+                string message = " ";
+                string product = " ";
+                string pay = " ";
+                foreach (var item in chk_list.CheckedItems)
+                {
+                    message += item.ToString();
+                    message += " ";
+                    
+                }
+                if (radioButton1.Checked)
+                    product = "Simple";
+                else
+                    product = "Variable";
+                if (radioButton2.Checked)
+                    pay = "On Delivery";
+                else
+                    pay = "Paypal";
+                message += " ";
+                MessageBox.Show(message);
                 Class1 c = new Class1
                 {
                     number = number.Text,
@@ -82,6 +102,10 @@ namespace lab4
                     objectname = objectname.Text,
                     count = count.Text,
                     price = price.Text,
+                    isavailable = chk_isavailable.Checked,
+                    productstyle = product,
+                    paymentstyle = pay
+                                    
                 };
                 c.save();
                 displaytable.DataSource = null;
@@ -147,6 +171,47 @@ namespace lab4
         }
 
         private void displaytable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click_1(object sender, EventArgs e)
         {
 
         }
